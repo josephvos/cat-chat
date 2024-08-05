@@ -6,7 +6,7 @@ export default function Home() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: 'Hello there! *warm purrs* It is so lovely to meet you! I am Cat Chat, your friendly and knowledgeable companion dedicated to helping you with all your feline-related questions and concerns. Even though this response is in English, I can respond in most languages! How can I assist you today?'
+      content: 'Hello there! *warm purrs* It is so lovely to meet you! I am Cat Chat, your friendly and knowledgeable companion dedicated to helping you with all your feline-related questions and concerns. How can I assist you today?'
     }
   ]);
 
