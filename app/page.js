@@ -11,7 +11,7 @@ export default function Home() {
   ]);
 
   const [message, setMessage] = useState('');
-  const messagesEndRef = useRef(null); // Ref for the end of the messages container
+  const messagesEndRef = useRef(null);
 
   const sendMessage = async () => {
     if (message.trim()) {
@@ -68,7 +68,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // Scroll to the bottom of the messages container
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
@@ -86,21 +85,21 @@ export default function Home() {
         backgroundImage: 'url(/pinkcatbackground-transformed.jpeg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        padding: { xs: 1, sm: 2 },
+        padding: { xs: '2%', sm: '1%' },
       }}
     >
       <Box
         sx={{
           display: 'inline-block',
-          padding: { xs: '4px 6px', sm: '5px 9px' },
+          padding: { xs: '4px 6px', sm: '8px 12px' },
           border: '3px solid black',
           borderRadius: '12px',
           bgcolor: '#f7eaf2',
           position: 'absolute',
           zIndex: 2,
-          top: '4%', // Use percentage for vertical positioning
-          left: '50%', // Center horizontally
-          transform: 'translate(-50%, 0)', // Centering effect
+          top: '5%', // Use percentage for vertical positioning
+          left: '50%',
+          transform: 'translate(-50%, 0)',
         }}
       >
         <Typography
@@ -112,17 +111,24 @@ export default function Home() {
             fontFamily: "'Roboto'",
             color: 'black',
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
-            fontSize: { xs: '2.5rem', sm: '3rem' },
+            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
           }}
         >
           The Cat Chat
         </Typography>
       </Box>
-      <Box sx={{ zIndex: 2, width: '100%', maxWidth: '500px' }}>
+      <Box  sx={{
+    zIndex: 2,
+    width: { xs: '90%', sm: '60%', md: '40%', lg: '30%' }, // Adjusts width based on screen size
+    height: { xs: 'auto', sm: '70%', md: '75%', lg: '77%' }, // Adjusts height based on screen size
+    maxWidth: '120%', // Ensures width does not exceed 120%
+    maxHeight: '75%', // Ensures height does not exceed 75%
+    margin: '0 auto', // Centers the Box horizontally
+  }}>
         <Stack
           direction={'column'}
           width="100%"
-          height={{ xs: 'auto', sm: '700px' }}
+          height="100%"
           border="3px solid #000000"
           boxShadow="0px 8px 12px rgba(1, 0, 0, 0.1)"
           borderRadius="12px"
@@ -163,9 +169,6 @@ export default function Home() {
             spacing={2}
             sx={{
               width: '100%',
-              maxWidth: '100%',
-              margin: '0 auto',
-              padding: 1,
               gap: 1,
             }}
           >
