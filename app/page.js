@@ -120,7 +120,7 @@ export default function Home() {
       <Box  sx={{
     zIndex: 2,
     width: { xs: '90%', sm: '60%', md: '40%', lg: '30%' }, // Adjusts width based on screen size
-    height: { xs: 'auto', sm: '70%', md: '75%', lg: '77%' }, // Adjusts height based on screen size
+    height: { xs: '67%', sm: '70%', md: '75%', lg: '77%' }, // Adjusts height based on screen size
     maxWidth: '120%', // Ensures width does not exceed 120%
     maxHeight: '75%', // Ensures height does not exceed 75%
     margin: '0 auto', // Centers the Box horizontally
