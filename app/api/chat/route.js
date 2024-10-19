@@ -14,15 +14,18 @@ export async function POST(req) {
       return NextResponse.json({ message: 'Invalid request format. Expected user messages.' }, { status: 400 });
     }
 
-    const chatCompletion = await groq.chat.completions.create({
+    const chatCompletion = await groq.chat.completions.create({ 
       messages: [
         { role: 'system', content: systemPrompt },
         ...userMessages,
       ],
       model: 'llama3-8b-8192',
       temperature: 0.5,
+      
       stream: true,
     });
+    
+    
 
     const readableStream = new ReadableStream({
       async start(controller) {
